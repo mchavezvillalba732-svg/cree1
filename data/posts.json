@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": 1772836433831,
+    "titulo": "hola1",
+    "categoria": "Noticias",
+    "resumen": "hola2",
+    "contenido": "hola3",
+    "fecha": "6 de marzo de 2026"
+  }
+]
