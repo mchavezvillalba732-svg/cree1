@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Admin - Blog CREE</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Panel Admin - Blog CREE</h1>
+    <nav>
+      <a href="../index.html">Ver blog</a>
+      <a href="#" onclick="logout()">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PUBLICAR NUEVO POST -->
+    <section>
+      <h2>Publicar nuevo artículo</h2>
+      <p id="publish-status"></p>
+
+      <form id="post-form">
+        <div>
+          <label for="post-title">Título *</label><br/>
+          <input type="text" id="post-title" placeholder="Título del artículo" required style="width:100%" />
+        </div>
+        <br/>
+        <div>
+          <label for="post-category">Categoría</label><br/>
+          <select id="post-category">
+            <option value="Noticias">Noticias</option>
+            <option value="Eventos">Eventos</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Arte y Cultura">Arte y Cultura</option>
+            <option value="Ciencia">Ciencia</option>
+            <option value="Comunicados">Comunicados</option>
+          </select>
+        </div>
+        <br/>
+        <div>
+          <label for="post-author">Autor</label><br/>
+          <input type="text" id="post-author" placeholder="Nombre del autor" style="width:100%" />
+        </div>
+        <br/>
+        <div>
+          <label for="post-body">Contenido *</label><br/>
+          <textarea id="post-body" rows="10" placeholder="Escribí el contenido completo del artículo aquí..." required style="width:100%"></textarea>
+        </div>
+        <br/>
+        <button type="submit">Publicar artículo</button>
+      </form>
+    </section>
+
+    <hr/>
+
+    <!-- LISTA DE POSTS -->
+    <section>
+      <h2>Artículos publicados</h2>
+      <div id="admin-posts-list">
+        <p>Cargando artículos...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Blog CREE</p>
+  </footer>
+
+  <script src="../js/github-api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

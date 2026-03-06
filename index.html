@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog CREE</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Blog CREE</h1>
+    <p>Centro Regional de Educación</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Últimos artículos</h2>
+    <div id="posts-container">Cargando artículos...</div>
+  </main>
+
+  <footer>
+    <p>© 2026 Blog CREE</p>
+  </footer>
+
+  <!-- Modal para leer post completo -->
+  <div id="modal" style="display:none">
+    <div id="modal-inner">
+      <button onclick="cerrarModal()">Cerrar</button>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-fecha"></p>
+      <p id="modal-categoria"></p>
+      <div id="modal-contenido"></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/blog.js"></script>
+
+</body>
+</html>

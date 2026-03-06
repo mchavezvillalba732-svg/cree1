@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Blog CREE</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Blog CREE - Panel Admin</h1>
+    <nav>
+      <a href="index.html">← Volver al blog</a>
+      <button id="btn-logout" style="display:none" onclick="cerrarSesion()">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN LOGIN -->
+    <section id="seccion-login">
+      <h2>Iniciar sesión</h2>
+      <p>Ingresá tu usuario, contraseña y token de GitHub para administrar el blog.</p>
+
+      <label>Usuario:</label><br>
+      <input type="text" id="input-usuario" placeholder="admin" /><br><br>
+
+      <label>Contraseña:</label><br>
+      <input type="password" id="input-contrasena" placeholder="Tu contraseña" /><br><br>
+
+      <label>Token de GitHub:</label><br>
+      <input type="password" id="input-token" placeholder="ghp_xxxxxxxxxxxx" /><br>
+      <small>El token solo se guarda en memoria, no se almacena en ningún archivo.</small><br><br>
+
+      <button onclick="iniciarSesion()">Ingresar</button>
+      <p id="error-login" style="color:red; display:none">Usuario o contraseña incorrectos.</p>
+    </section>
+
+    <!-- SECCIÓN PANEL (oculta hasta hacer login) -->
+    <section id="seccion-panel" style="display:none">
+
+      <h2>Publicar nuevo artículo</h2>
+      <p id="mensaje-estado"></p>
+
+      <label>Título *</label><br>
+      <input type="text" id="nuevo-titulo" placeholder="Título del artículo" style="width:100%"/><br><br>
+
+      <label>Categoría *</label><br>
+      <select id="nueva-categoria">
+        <option value="Noticias">Noticias</option>
+        <option value="Eventos">Eventos</option>
+        <option value="Deportes">Deportes</option>
+        <option value="Arte y Cultura">Arte y Cultura</option>
+        <option value="Ciencia">Ciencia</option>
+        <option value="Comunicados">Comunicados</option>
+      </select><br><br>
+
+      <label>Resumen (opcional, se muestra en la tarjeta)</label><br>
+      <input type="text" id="nuevo-resumen" placeholder="Breve descripción..." style="width:100%"/><br><br>
+
+      <label>Contenido completo *</label><br>
+      <textarea id="nuevo-contenido" rows="8" style="width:100%" placeholder="Escribí el contenido completo aquí..."></textarea><br><br>
+
+      <button onclick="publicarPost()">Publicar artículo</button>
+
+      <hr>
+
+      <h2>Artículos publicados</h2>
+      <div id="admin-lista-posts">Cargando...</div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Blog CREE</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/admin.js"></script>
+
+</body>
+</html>
