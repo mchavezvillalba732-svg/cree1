@@ -5,10 +5,10 @@
 
 const CONFIG = {
   // Tu usuario de GitHub
-  GITHUB_USUARIO: "TU_USUARIO_AQUI",
+  GITHUB_USUARIO: "mchavezvillalba732-svg",
 
   // Nombre exacto del repositorio
-  GITHUB_REPO: "TU_REPO_AQUI",
+  GITHUB_REPO: "cree1",
 
   // Rama principal (normalmente "main")
   GITHUB_RAMA: "main",
@@ -17,6 +17,6 @@ const CONFIG = {
   POSTS_ARCHIVO: "data/posts.json",
 
   // Usuario y contraseña para el panel admin
-  ADMIN_USUARIO: "admin",
-  ADMIN_CONTRASENA: "cree2026"
+  ADMIN_USUARIO: "1",
+  ADMIN_CONTRASENA: "1"
 };
